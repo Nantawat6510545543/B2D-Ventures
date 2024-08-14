@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class KuInvestmentConfig(AppConfig):
+class B2DVenturesConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'KU_INVESTMENT'
+    name = 'B2D_Ventures'

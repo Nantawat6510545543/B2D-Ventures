@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'KU_INVESTMENT',
+    'B2D_Ventures',
 ]
 
 MIDDLEWARE = [
