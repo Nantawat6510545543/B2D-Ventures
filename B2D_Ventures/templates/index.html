@@ -1,37 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>B2D Ventures</title>
-    </head>
-    <body>
-        {% if messages %}
-            {{ messages }}
-            <ul class="messages">
-                {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+{% extends "base.html" %}
+{% load static %}
 
-        <h1><a href="{% url 'register' %}" class="button">Register</a></h1>
-        {% if user.is_authenticated %}
-            <h1>welcome back {{user.username}}!</h1>
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %}
 
-            <form action="{% url 'logout' %}?next=/" method="post">
-                {% csrf_token %}
-                <button type="submit">Logout</button>
-            </form>
+{% block content %}
+    <p class="red-text">This text will be red.</p>
 
-        {% else %}
-            <h1>Please log in!</h1>
-            <h1><a href="{% url 'login' %}" class="button">Login</a></h1>
-        {% endif %}
+    {% if messages %}
+        {{ messages }}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 
-        Shikanoko nokonoko koshitantan<br>
-        Shikanoko nokonoko koshitantan<br>
-        Shikanoko nokonoko koshitantan<br>
-        Shikanoko nokonoko koshitantan<br>
-    </body>
-</html>
+    <h1><a href="{% url 'register' %}" class="button">Register</a></h1>
+    {% if user.is_authenticated %}
+        <h1>welcome back {{user.username}}!</h1>
+
+        <form action="{% url 'logout' %}?next=/" method="post">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+
+    {% else %}
+        <h1>Please log in!</h1>
+        <h1><a href="{% url 'login' %}" class="button">Login</a></h1>
+    {% endif %}
+
+    Shikanoko nokonoko koshitantan<br>
+    Shikanoko nokonoko koshitantan<br>
+    Shikanoko nokonoko koshitantan<br>
+    Shikanoko nokonoko koshitantan<br>
+{% endblock %}
