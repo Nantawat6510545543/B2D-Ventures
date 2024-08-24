@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block link %}
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% block css_link %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% endblock %}
 
 {% block content %}
-    <p class="red-text">This text will be red.</p>
+    <p class="heading-font">B2D Ventures</p>
 
     {% if messages %}
         {{ messages }}
@@ -17,22 +18,49 @@
         </ul>
     {% endif %}
 
-    <h1><a href="{% url 'register' %}" class="button">Register</a></h1>
+    <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
+        <button class="generic-button" type="submit">Register</button>
+    </form>
+
     {% if user.is_authenticated %}
         <h1>welcome back {{user.username}}!</h1>
 
         <form action="{% url 'logout' %}?next=/" method="post">
             {% csrf_token %}
-            <button type="submit">Logout</button>
+            <button class="generic-button" type="submit">Logout</button>
         </form>
 
     {% else %}
         <h1>Please log in!</h1>
-        <h1><a href="{% url 'login' %}" class="button">Login</a></h1>
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <button class="generic-button" type="submit">Login</button>
+        </form>
     {% endif %}
 
-    Shikanoko nokonoko koshitantan<br>
-    Shikanoko nokonoko koshitantan<br>
-    Shikanoko nokonoko koshitantan<br>
-    Shikanoko nokonoko koshitantan<br>
+    <div class="card">
+        <img class="card-img" alt="Test image"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fronalpstock_big.jpg/2560px-Fronalpstock_big.jpg"
+        >
+        <p class="content-font">
+            Shikanoko nokonoko koshitantan<br>
+            Shikanoko nokonoko koshitantan<br>
+            Shikanoko nokonoko koshitantan<br>
+            Shikanoko nokonoko koshitantan<br>
+        </p>
+
+        <img class="card-img" alt="Test image"
+            src="https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg"
+        >
+
+        <p class="content-font">
+            costantan
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="heading-font">29000 USD</div>
+        <div class="content-font">Current Funds Raised</div>
+    </div>
 {% endblock %}

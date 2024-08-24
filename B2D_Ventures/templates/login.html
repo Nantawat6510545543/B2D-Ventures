@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load static %}
+
+{% comment %} {% block css_link %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %} {% endcomment %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
     <h2>Login</h2>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Login</button>
+        <button class="generic-button" type="submit">Login</button>
     </form>
 
     {% if messages %}
@@ -18,5 +22,4 @@
             {% endfor %}
         </ul>
     {% endif %}
-</body>
-</html>
+{% endblock %}

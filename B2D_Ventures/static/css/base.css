@@ -1,3 +1,41 @@
-.red-text {
-    color: red;
+html {
+    background-color: #1A1A1A;
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+    font-size: 18px;
+}
+
+.container {
+    border: 1px solid #999999;
+    border-radius: 12px;
+    background: #1A1A1A;
+    padding: 16px 24px;
+}
+
+.generic-button {
+    background: #703BF7;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 18px 24px;
+
+    font-family: 'Urbanist', sans-serif;
+    font-size: 18px;
+}
+
+/* Fonts */
+
+.heading-font {
+    font-weight: 700; /* Bold weight */
+    font-size: 36px;
+}
+
+.topic-font {
+    font-size: 24px;
+}
+
+.content-font {
+    color: #999999;
+    font-weight: 500;
+    font-size: 18px;
 }
