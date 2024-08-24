@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='https://fonts.googleapis.com/css?family=Urbanist' rel='stylesheet'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Urbanist'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         {% block css_link %}
             <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -12,6 +13,9 @@
         <title>{% block title %}B2D Ventures{% endblock %}</title>
     </head>
     <body>
+        <input type="text" id="search-box" placeholder="Search...">
+        <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+        <img id="profile-img" alt="Profile Picture" src="https://64.media.tumblr.com/cff5524eaed3a69e6187d4a8a7bd8417/3eea390ca2b57633-e8/s640x960/e597246a66f8169f886d2807c9d30eac3af2814c.jpg">
         {% block content %}{% endblock %}
     </body>
 </html>
