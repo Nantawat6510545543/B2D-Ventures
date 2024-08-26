@@ -28,6 +28,7 @@ html {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
+    line-height: 30px;
 }
 
 /* Change the link color to #111 (black) on hover */
@@ -58,9 +59,14 @@ html {
 }
 
 /* Make a new navbar css file? */
+#search-container {
+    width: 820px;
+    margin-left: auto;
+}
+
 #search-box {
-    width: 986px;
-    height: 68px;
+    width: 400px;
+    height: 65px;
     border-radius: 40px;
     border: 1px solid #6F6F6F;
     background-color: #1A1A1A;

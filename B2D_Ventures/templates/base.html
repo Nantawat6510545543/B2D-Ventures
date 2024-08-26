@@ -18,19 +18,17 @@
             <li class="navbar-item-left"><a class="navbar-link" href="">Home</a></li>
             <li class="navbar-item-left"><a class="navbar-link" href="">Investors</a></li>
             <li class="navbar-item-left"><a class="navbar-link" href="">Businesses</a></li>
-            <li class="navbar-item-right">
-                <img id="profile-img" alt="Profile Picture" src="https://64.media.tumblr.com/cff5524eaed3a69e6187d4a8a7bd8417/3eea390ca2b57633-e8/s640x960/e597246a66f8169f886d2807c9d30eac3af2814c.jpg">
-            </li>
-        </ul>
-        <input type="text" id="search-box" placeholder="Search for start-up, projects...">
-        <button type="submit" class="purple-button"><i class="fa fa-search"></i></button>
 
-        <button class="gray-button">
-            <i class="fa fa-arrow-left"></i>
-        </button>
-        <button class="gray-button">
-            <i class="fa fa-arrow-right"></i>
-        </button>
+            <div id="search-container">
+                <input type="text" id="search-box" placeholder="Search for start-up, projects...">
+                <button type="submit" class="purple-button"><i class="fa fa-search"></i></button>
+                <li class="navbar-item-right">
+                    <img id="profile-img" alt="Profile Picture" src="https://64.media.tumblr.com/cff5524eaed3a69e6187d4a8a7bd8417/3eea390ca2b57633-e8/s640x960/e597246a66f8169f886d2807c9d30eac3af2814c.jpg">
+                </li>
+                <button class="generic-button" type="submit">Register</button>
+                <button class="generic-button" type="submit">Login</button>
+            </div>
+        </ul>
         {% block content %}{% endblock %}
     </body>
 </html>
