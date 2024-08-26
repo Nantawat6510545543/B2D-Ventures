@@ -16,27 +16,6 @@
         </ul>
     {% endif %}
 
-    <form action="{% url 'register' %}" method="post">
-        {% csrf_token %}
-        <button class="generic-button" type="submit">Register</button>
-    </form>
-
-    {% if user.is_authenticated %}
-        <h1>welcome back {{user.username}}!</h1>
-
-        <form action="{% url 'logout' %}?next=/" method="post">
-            {% csrf_token %}
-            <button class="generic-button" type="submit">Logout</button>
-        </form>
-
-    {% else %}
-        <h1>Please log in!</h1>
-        <form action="{% url 'login' %}" method="post">
-            {% csrf_token %}
-            <button class="generic-button" type="submit">Login</button>
-        </form>
-    {% endif %}
-
     <div class="card-container">
         <div class="card-subcontainer">
             <img class="card-img" alt="Test image"

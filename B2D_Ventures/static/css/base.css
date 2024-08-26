@@ -5,39 +5,10 @@ html {
     font-size: 18px;
 }
 
-.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-.navbar-app-name {
-    float: left;
-    font-weight: bold;
-    font-size: 36px;
-}
-
-.navbar-item-left {
-    float: left;
-}
-
-.navbar-link {
-    display: block;
+button {
+    font-family: 'Urbanist', sans-serif;
     color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    line-height: 30px;
-}
-
-/* Change the link color to #111 (black) on hover */
-.navbar-link:hover {
-    background-color: #111;
-}
-
-.navbar-item-right {
-    float: right;
+    font-size: 18px;
 }
 
 .container {
@@ -53,28 +24,6 @@ html {
     border-radius: 10px;
     color: white;
     padding: 18px 24px;
-
-    font-family: 'Urbanist', sans-serif;
-    font-size: 18px;
-}
-
-/* Make a new navbar css file? */
-#search-container {
-    width: 820px;
-    margin-left: auto;
-}
-
-#search-box {
-    width: 400px;
-    height: 65px;
-    border-radius: 40px;
-    border: 1px solid #6F6F6F;
-    background-color: #1A1A1A;
-
-    color: #999999;
-    font-weight: 500;
-    font-size: 20px;
-    padding-left: 25px;
 }
 
 .purple-button {
@@ -85,8 +34,6 @@ html {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-
-    font-size: 18px;
 }
 
 .gray-button {
@@ -97,8 +44,6 @@ html {
     border: 1px solid #999999;
     border-radius: 50%;
     cursor: pointer;
-
-    font-size: 18px;
 }
 
 #profile-img {
@@ -109,7 +54,6 @@ html {
 }
 
 /* Fonts */
-
 .heading-font {
     font-weight: bold;
     font-size: 36px;

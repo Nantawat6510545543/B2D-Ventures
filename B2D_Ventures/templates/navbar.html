@@ -1,0 +1,38 @@
+<ul class="navbar">
+    <li class="navbar-app-name"><a class="navbar-link" href="">B2D Ventures</a></li>
+    <li class="navbar-item-left"><a class="navbar-link" href="">Home</a></li>
+    <li class="navbar-item-left"><a class="navbar-link" href="">Investors</a></li>
+    <li class="navbar-item-left"><a class="navbar-link" href="">Businesses</a></li>
+
+    <div id="search-container">
+        <input type="text" id="search-box" placeholder="Search for start-up, projects...">
+        <button type="submit" class="purple-button"><i class="fa fa-search"></i></button>
+
+        {% if user.is_authenticated %}
+            <li class="navbar-username">
+                {{user.username}}
+            </li>
+            <li class="navbar-item-right">
+                <form action="{% url 'logout' %}?next=/" method="post">
+                    {% csrf_token %}
+                    <button class="navbar-link" type="submit">Logout</button>
+                </form>
+            </li>
+            <li class="navbar-item-right">
+                <img id="profile-img" alt="Profile Picture" src="https://64.media.tumblr.com/cff5524eaed3a69e6187d4a8a7bd8417/3eea390ca2b57633-e8/s640x960/e597246a66f8169f886d2807c9d30eac3af2814c.jpg">
+            </li>
+        {% else %}
+            <li class="navbar-item-right">
+                <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    <button class="navbar-link" type="submit">Login</button>
+                </form>
+            </li>
+        {% endif %}
+    </div>
+</ul>
+
+<form action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+    <button class="generic-button" type="submit">Register</button>
+</form>
