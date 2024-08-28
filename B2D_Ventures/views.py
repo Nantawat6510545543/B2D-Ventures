@@ -12,6 +12,8 @@ from .forms import CustomUserCreationForm
 def index(request) -> HttpResponse:
     return render(request, "index.html")
 
+def details(request):
+    return render(request, 'details.html')
 
 class RegisterView(CreateView):
     form_class = CustomUserCreationForm

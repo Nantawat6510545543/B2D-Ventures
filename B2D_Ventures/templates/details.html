@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_link %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/details.css' %}">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="slider-for">
+        <div>    
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        </div>
+        <div>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/5ToMX4iPI4w"></iframe>
+        </div>
+        <div>
+            <img alt="Test image" src="https://img.salehere.co.th/p/1200x0/2023/06/21/6cvoiswwldk7.jpg">
+        </div>
+        <div>    
+            <img alt="Test image" src="https://i.pinimg.com/236x/89/2c/9d/892c9df87bc02d69860b494c3be12fad.jpg">
+        </div>
+        <div>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/zSwcTiurwwk"></iframe>
+        </div>
+        <div>    
+            <img alt="Test image" src="https://i.pinimg.com/236x/89/2c/9d/892c9df87bc02d69860b494c3be12fad.jpg">
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <div>    
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        </div>
+        <div>
+            <img alt="Youtube image" src="https://img.youtube.com/vi/5ToMX4iPI4w/1.jpg">
+            <i class="fa fa-play-circle" aria-hidden="true"></i>
+        </div>
+        <div>
+            <img alt="Test image" src="https://img.salehere.co.th/p/1200x0/2023/06/21/6cvoiswwldk7.jpg"></div>
+        <div>    
+            <img alt="Test image" src="https://i.pinimg.com/236x/89/2c/9d/892c9df87bc02d69860b494c3be12fad.jpg">
+        </div>
+        <div>    
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/zSwcTiurwwk"></iframe>
+        </div>
+        <div>    
+            <img alt="Test image" src="https://i.pinimg.com/236x/89/2c/9d/892c9df87bc02d69860b494c3be12fad.jpg"> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/details.js' %}"></script>
+{% endblock %}
+
+{% comment %} https://republic.com/lexitech2024 {% endcomment %}
