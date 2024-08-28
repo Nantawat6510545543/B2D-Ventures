@@ -8,27 +8,37 @@
 }
 
 .card-subcontainer {
+    padding: 30px;
     border: 1px solid #999999;
     border-radius: 12px;
 }
 
 .card-img {
-    padding: 30px;
-    padding-bottom: 0px;
     border-radius: 12px;
     width: 400px;
     height: 300px;
 }
 
 .card-heading-font {
-    padding-left: 30px;
     font-weight: bold;
     font-size: 36px;
 }
 
 .card-content-font {
-    padding-left: 30px;
     color: #999999;
     font-weight: 500;
     font-size: 18px;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%; /* Set this to the percentage of completion */
+    background-color: #703BF7;
+    height: 20px;
+    box-sizing: border-box;
 }
