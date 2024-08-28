@@ -1,7 +1,42 @@
 /* #TODO make relative */
 
-.slider-nav img {
+.slick-carousel button {
+    color: black;
+}
+
+.slick-carousel-container {
+    width: 100%;
+    height: 100px;
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+    font-size: 0px;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #703BF7;
+}
+/* .slider-for div {
     margin: auto;
+    padding: 10px;
     width: 400px;
     height: 400px;
 }
+
+.slider-for div * {
+    width: 400px;
+    height: 400px;
+}
+
+.slider-nav div {
+    margin: auto;
+    width: 100%;
+    height: 400px;
+}
+
+.slider-nav div * {
+    width: 100px;
+    height: 100px;
+} */
