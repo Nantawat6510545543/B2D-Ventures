@@ -1,6 +1,5 @@
 <ul class="navbar">
-    <li class="navbar-app-name"><a class="navbar-link" href="">B2D Ventures</a></li>
-    <li class="navbar-item-left"><a class="navbar-link" href="">Home</a></li>
+    <li class="navbar-app-name"><a class="navbar-link" href="{% url 'index' %}">B2D Ventures</a></li>
     <li class="navbar-item-left"><a class="navbar-link" href="">Investors</a></li>
     <li class="navbar-item-left"><a class="navbar-link" href="">Businesses</a></li>
 
@@ -31,8 +30,3 @@
         {% endif %}
     </div>
 </ul>
-
-<form action="{% url 'register' %}" method="post">
-    {% csrf_token %}
-    <button class="generic-button" type="submit">Register</button>
-</form>

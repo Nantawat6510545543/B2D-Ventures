@@ -15,6 +15,12 @@
         <button class="generic-button" type="submit">Login</button>
     </form>
 
+    Doesn't have account? Register here.
+    <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
+        <button class="generic-button" type="submit">Register</button>
+    </form>
+
     {% if messages %}
         <ul class="messages">
             {% for message in messages %}
