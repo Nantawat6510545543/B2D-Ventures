@@ -8,12 +8,15 @@ from django.views.generic import CreateView, FormView
 
 from .forms import CustomUserCreationForm
 
+
 # Create your views here.
 def index(request) -> HttpResponse:
     return render(request, "index.html")
 
+
 def details(request):
     return render(request, 'details.html')
+
 
 class RegisterView(CreateView):
     form_class = CustomUserCreationForm
