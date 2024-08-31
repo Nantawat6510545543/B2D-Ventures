@@ -12,8 +12,9 @@
 }
 
 .slick-carousel-container {
+    padding: 20px;
     width: 100%;
-    height: 100px;
+    height: 450px;
 }
 
 .slick-dots {
@@ -26,25 +27,9 @@
     background-color: #703BF7;
 }
 
-/* .slider-for div {
-    margin: auto;
-    padding: 10px;
-    width: 400px;
-    height: 400px;
+#details-short-container {
+    border: 1px solid #999999;
+    border-radius: 12px;
+    background: #1A1A1A;
+    padding: 30px;
 }
-
-.slider-for div * {
-    width: 400px;
-    height: 400px;
-}
-
-.slider-nav div {
-    margin: auto;
-    width: 100%;
-    height: 400px;
-}
-
-.slider-nav div * {
-    width: 100px;
-    height: 100px;
-} */

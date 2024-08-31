@@ -53,6 +53,37 @@ button {
     border-radius: 50%;
 }
 
+/* Cards */
+.card-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-subcontainer {
+    padding: 30px;
+    border: 1px solid #999999;
+    border-radius: 12px;
+}
+
+.card-img {
+    border-radius: 12px;
+    width: 400px;
+    height: 300px;
+}
+
+.card-heading-font {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.card-content-font {
+    color: #999999;
+    font-weight: 500;
+    font-size: 18px;
+}
+
 /* Fonts */
 .heading-font {
     font-weight: bold;
