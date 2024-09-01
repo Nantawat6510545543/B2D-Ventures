@@ -5,7 +5,12 @@ html {
     font-size: 18px;
 }
 
-button {
+hr {
+    border-color:#999999;
+}
+
+button 
+{
     font-family: 'Urbanist', sans-serif;
     color: white;
     font-size: 18px;

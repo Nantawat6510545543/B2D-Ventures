@@ -27,9 +27,18 @@
     background-color: #703BF7;
 }
 
-#details-short-container {
-    border: 1px solid #999999;
+.details-container {
+    border: none;
     border-radius: 12px;
     background: #1A1A1A;
     padding: 30px;
+}
+
+.details-container img,
+.details-container iframe {
+    width: 500px;
+    height: 400px;
+    padding-top: 30px;
+    margin: auto;
+    display: block;
 }
