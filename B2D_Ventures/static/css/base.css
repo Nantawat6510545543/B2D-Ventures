@@ -78,17 +78,6 @@ button
     height: 300px;
 }
 
-.card-heading-font {
-    font-weight: bold;
-    font-size: 36px;
-}
-
-.card-content-font {
-    color: #999999;
-    font-weight: 500;
-    font-size: 18px;
-}
-
 /* Fonts */
 .heading-font {
     font-weight: bold;
@@ -102,5 +91,18 @@ button
 .content-font {
     color: #999999;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%; /* Set this to the percentage of completion */
+    background-color: #703BF7;
+    height: 20px;
+    box-sizing: border-box;
 }
