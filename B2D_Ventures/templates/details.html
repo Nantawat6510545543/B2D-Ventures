@@ -35,7 +35,15 @@
     <div class="details-container">
         <p class="heading-font">CoffeeFast</p>
         <p class="content-font">
-            Make coffee, coffee good
+            CoffeeFast is a dynamic startup revolutionizing the coffee experience for busy professionals.
+
+            We offer a fast, convenient service for high-quality, artisanal coffee that fits seamlessly into the hectic schedules of our customers.
+
+            With a focus on speed and efficiency, CoffeeFast provides freshly brewed coffee through an innovative mobile app.
+
+            Users can order and pick up their drinks quickly or have them delivered right to their location.
+
+            Our mission is to enhance productivity and enjoyment by delivering premium coffee with unparalleled convenience.
         </p>
 
         <p class="heading-font">Deal Terms</p>
@@ -61,52 +69,83 @@
         <p class="heading-font">
             $565,372 Invested
         </p>
-        <button class="generic-button" style="margin-right: inline-block">Start Investment</button>
-        <button class="generic-button">See Discussion</button>
+        <button class="generic-button">Start Investment</button>
     </div>
+    <hr>
+    #TODO wil be changed to navbar<br>
+    {% comment %}
+    #TODO make sticky<br>
+    {% endcomment %}
+    <button class="generic-button" onclick="toggleDetails()">See Details</button>
+    <button class="generic-button" onclick="toggleDiscussion()">See Discussion</button>
     <hr>
 
-    <div class="details-container">
-        <p class="heading-font">About</p>
-        <p class="content-font">
-            Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma, bar panna so Barista cortado trifecta extraction, skinny aftertaste filter java cultivar cinnamon. Mazagran trade Barista french and Acerbic acerbic Aged milk cinnamon origin carajillo, mountain coffee roast mug wings Bar single viennese pumpkin go pot, dripper crema flavour mocha At bar sit medium au breve. Espresso Brewed Blue iced Americano robust whipped, bar percolator  grounds go saucer robusta, Au shop Affogato Bar aged coffee, Barista blue strong origin aftertaste. Blue skinny coffee breve Brewed acerbic, siphon steamed And foam, qui Arabica ut latte. Go brewed At aftertaste sweet cinnamon caffeine rich strong caramelization Aftertaste, Body roast body frappuccino Beans extraction sit americano Aroma.
-        </p>
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/025/282/026/small_2x/stock-of-mix-a-cup-coffee-latte-more-motive-top-view-foodgraphy-generative-ai-photo.jpg"></img>
-        <p class="content-font">
-            Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma, bar panna so Barista cortado trifecta extraction, skinny aftertaste filter java cultivar cinnamon. Mazagran trade Barista french and Acerbic acerbic Aged milk cinnamon origin carajillo, mountain coffee roast mug wings Bar single viennese pumpkin go pot, dripper crema flavour mocha At bar sit medium au breve. Espresso Brewed Blue iced Americano robust whipped, bar percolator  grounds go saucer robusta, Au shop Affogato Bar aged coffee, Barista blue strong origin aftertaste. Blue skinny coffee breve Brewed acerbic, siphon steamed And foam, qui Arabica ut latte. Go brewed At aftertaste sweet cinnamon caffeine rich strong caramelization Aftertaste, Body roast body frappuccino Beans extraction sit americano Aroma.
-        </p>
-        <iframe src="https://www.youtube.com/embed/X9tg3J5OiYU"></iframe>
+    {% comment %} #TODO Refactor to atomic details {% endcomment %}
+    <div id="details-section" style="display: block;">
+        <div class="details-container">
+            <p class="heading-font">About</p>
+            <p class="content-font">
+                Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma, bar panna so Barista cortado trifecta extraction, skinny aftertaste filter java cultivar cinnamon. Mazagran trade Barista french and Acerbic acerbic Aged milk cinnamon origin carajillo, mountain coffee roast mug wings Bar single viennese pumpkin go pot, dripper crema flavour mocha At bar sit medium au breve. Espresso Brewed Blue iced Americano robust whipped, bar percolator  grounds go saucer robusta, Au shop Affogato Bar aged coffee, Barista blue strong origin aftertaste. Blue skinny coffee breve Brewed acerbic, siphon steamed And foam, qui Arabica ut latte. Go brewed At aftertaste sweet cinnamon caffeine rich strong caramelization Aftertaste, Body roast body frappuccino Beans extraction sit americano Aroma.
+            </p>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/025/282/026/small_2x/stock-of-mix-a-cup-coffee-latte-more-motive-top-view-foodgraphy-generative-ai-photo.jpg"></img>
+            <p class="content-font">
+                Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma, bar panna so Barista cortado trifecta extraction, skinny aftertaste filter java cultivar cinnamon. Mazagran trade Barista french and Acerbic acerbic Aged milk cinnamon origin carajillo, mountain coffee roast mug wings Bar single viennese pumpkin go pot, dripper crema flavour mocha At bar sit medium au breve. Espresso Brewed Blue iced Americano robust whipped, bar percolator  grounds go saucer robusta, Au shop Affogato Bar aged coffee, Barista blue strong origin aftertaste. Blue skinny coffee breve Brewed acerbic, siphon steamed And foam, qui Arabica ut latte. Go brewed At aftertaste sweet cinnamon caffeine rich strong caramelization Aftertaste, Body roast body frappuccino Beans extraction sit americano Aroma.
+            </p>
+            <iframe src="https://www.youtube.com/embed/X9tg3J5OiYU"></iframe>
+        </div>
+        <hr>
+        <p class="heading-font" style="text-align: center;">Team</p>
+        <div class="card-container">
+            <div class="card-subcontainer">
+                <img class="card-img" alt="Test image"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ13LZQHT6miu4Vcle98i7GiHmBjqyG7hzU4Q&s"
+                >
+                <p class="heading-font" style="text-align: center;">
+                    Alex Johnson
+                </p>
+                <p class="topic-font" style="text-align: center;">
+                    Position: COO
+                </p>
+                <p class="content-font">
+                    Alex Johnson, COO at CoffeeFast, has over a decade of experience in operational management. 
+                    With an MBA from Stanford, Alex excels in optimizing processes and enhancing organizational efficiency.
+                </p>
+            </div>
+            <div class="card-subcontainer">
+                <img class="card-img" alt="Test image"
+                    src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg"
+                >
+                <p class="heading-font" style="text-align: center;">
+                    Jordan Lee
+                </p>
+                <p class="topic-font" style="text-align: center;">
+                    Position: Lead Product Developer
+                </p>
+                <p class="content-font">
+                    Jordan Lee is the Lead Product Developer at CoffeeFast. 
+                    With a Computer Science degree from MIT, Jordan focuses on delivering 
+                    innovative and high-quality products, driving technology forward with a passion for excellence.
+                </p>
+            </div>
+        </div>
     </div>
-    <hr>
-    <p class="heading-font" style="text-align: center;">Team</p>
-    <div class="card-container">
-        <div class="card-subcontainer">
-            <img class="card-img" alt="Test image"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ13LZQHT6miu4Vcle98i7GiHmBjqyG7hzU4Q&s"
-            >
-            <p class="heading-font">
-                Mr. A
-            </p>
-            <p class="content-font">
-                I have passion
-            </p>
-        </div>
-        <div class="card-subcontainer">
-            <img class="card-img" alt="Test image"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ13LZQHT6miu4Vcle98i7GiHmBjqyG7hzU4Q&s"
-            >
-            <p class="heading-font">
-                Mr. A
-            </p>
-            <p class="content-font">
-                I have passion
-            </p>
-        </div>
+
+    <div id="discussion-section" style="display: none;">
+        {%comment%} #TODO requires authentication {% endcomment%} 
+        {% if user.is_authenticated %}
+            <textarea placeholder="Write your discussion..."></textarea><br><br>
+            <button class="generic-button" onclick="postDicussion()">Post Discussion</button>
+        {% else %}
+            Please login to join discussion
+        {% endif %}
+        <h1>User1</h1>
+        <li>I think this start-up is very cool!</li>
+
+        <h1>User2</h1>
+        <li>This is one of the start-up of all times!</li>
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="{% static 'js/details.js' %}"></script>
 {% endblock %}
-
-{% comment %} https://republic.com/lexitech2024 {% endcomment %}

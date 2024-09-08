@@ -92,6 +92,7 @@ button
     color: #999999;
     font-weight: 500;
     font-size: 20px;
+    text-align: justify;
 }
 
 .progress-bar {
