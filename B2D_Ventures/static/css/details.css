@@ -54,3 +54,10 @@
     font-size: 36px;
     color: #999999;
 }
+
+.discussion-box {
+    font-size: 20px;
+    width: 600px;
+    height: 300px;
+    resize: none;
+}

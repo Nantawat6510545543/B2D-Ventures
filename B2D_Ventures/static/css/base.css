@@ -9,11 +9,10 @@ hr {
     border-color:#999999;
 }
 
-button 
-{
-    font-family: 'Urbanist', sans-serif;
-    color: white;
+button {
+    cursor: pointer;
     font-size: 18px;
+    font-family: 'Urbanist', sans-serif;
 }
 
 .container {
@@ -38,7 +37,6 @@ button
     color: white;
     border: none;
     border-radius: 50%;
-    cursor: pointer;
 }
 
 .gray-button {
@@ -47,14 +45,6 @@ button
     background-color: #1A1A1A;
     color: #808080;
     border: 1px solid #999999;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-#profile-img {
-    width: 60px;
-    height: 60px;
-    border: none;
     border-radius: 50%;
 }
 

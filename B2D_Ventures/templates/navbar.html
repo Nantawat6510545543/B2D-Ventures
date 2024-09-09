@@ -1,5 +1,9 @@
 <ul class="navbar">
-    <li class="navbar-app-name"><a class="navbar-link" href="{% url 'index' %}">B2D Ventures</a></li>
+    <li class="navbar-item-left">
+        <a class="navbar-link" href="{% url 'index' %}">
+            <span class="heading-font">B2D Ventures</span>
+        </a>
+    </li>
     <li class="navbar-item-left"><a class="navbar-link" href="">Investors</a></li>
     <li class="navbar-item-left"><a class="navbar-link" href="">Businesses</a></li>
 
@@ -8,17 +12,20 @@
         <button type="submit" class="purple-button"><i class="fa fa-search"></i></button>
 
         {% if user.is_authenticated %}
-            <li class="navbar-username">
-                {{user.username}}
+            {% comment %} Note: float: right is put in reverse order {% endcomment %}
+            <li class="navbar-item-right">
+                <a class="navbar-link" href="" style="padding:2px; margin:10px;">
+                    <img id="profile-img" alt="Profile Picture" src="https://64.media.tumblr.com/cff5524eaed3a69e6187d4a8a7bd8417/3eea390ca2b57633-e8/s640x960/e597246a66f8169f886d2807c9d30eac3af2814c.jpg">
+                </a>
+            </li>
+            <li class="navbar-item-right">
+                <a class="navbar-link" href="">{{user.username}}</a>
             </li>
             <li class="navbar-item-right">
                 <form action="{% url 'logout' %}?next=/" method="post">
                     {% csrf_token %}
                     <button class="navbar-link" type="submit">Logout</button>
                 </form>
-            </li>
-            <li class="navbar-item-right">
-                <img id="profile-img" alt="Profile Picture" src="https://64.media.tumblr.com/cff5524eaed3a69e6187d4a8a7bd8417/3eea390ca2b57633-e8/s640x960/e597246a66f8169f886d2807c9d30eac3af2814c.jpg">
             </li>
         {% else %}
             <li class="navbar-item-right">
