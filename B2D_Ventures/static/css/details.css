@@ -1,0 +1,65 @@
+/* #TODO make relative */
+
+.slick-carousel button {
+    color: black;
+}
+
+.slick-carousel div * {
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    height: 400px;
+}
+
+.slick-carousel-container {
+    padding: 20px;
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+    font-size: 0px;
+}
+
+.slick-dots li button:before{
+    font-size: 12px;
+}
+
+.details-container {
+    border: none;
+    border-radius: 12px;
+    background: #1A1A1A;
+    padding: 30px;
+}
+
+.details-container img,
+.details-container iframe {
+    width: 500px;
+    height: 400px;
+    padding-top: 30px;
+    margin: auto;
+    display: block;
+}
+
+.slick-dots li button:before {
+    color: white;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: white;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 36px;
+    color: #999999;
+}
+
+.discussion-box {
+    width: 600px;
+    height: 300px;
+    resize: none;
+
+    font-family: 'Urbanist', sans-serif;
+    font-size: 20px;
+}

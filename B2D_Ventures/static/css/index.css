@@ -1,0 +1,12 @@
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%; /* Set this to the percentage of completion */
+    background-color: #703BF7;
+    height: 20px;
+    box-sizing: border-box;
+}

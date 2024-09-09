@@ -1,0 +1,99 @@
+html {
+    background-color: #1A1A1A;
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+    font-size: 18px;
+}
+
+hr {
+    border-color:#999999;
+}
+
+button {
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.container {
+    border: 1px solid #999999;
+    border-radius: 12px;
+    background: #1A1A1A;
+    padding: 16px 24px;
+}
+
+.generic-button {
+    background: #703BF7;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 18px 24px;
+}
+
+.purple-button {
+    width: 47px;
+    height: 47px;
+    background-color: #703BF7;
+    color: white;
+    border: none;
+    border-radius: 50%;
+}
+
+.gray-button {
+    width: 47px;
+    height: 47px;
+    background-color: #1A1A1A;
+    color: #808080;
+    border: 1px solid #999999;
+    border-radius: 50%;
+}
+
+/* Cards */
+.card-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-subcontainer {
+    padding: 30px;
+    border: 1px solid #999999;
+    border-radius: 12px;
+}
+
+.card-img {
+    border-radius: 12px;
+    width: 400px;
+    height: 300px;
+}
+
+/* Fonts */
+.heading-font {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.topic-font {
+    font-size: 24px;
+}
+
+.content-font {
+    color: #999999;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%; /* Set this to the percentage of completion */
+    background-color: #703BF7;
+    height: 20px;
+    box-sizing: border-box;
+}

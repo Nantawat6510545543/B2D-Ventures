@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% comment %} {% block css_link %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %} {% endcomment %}
+
+{% block title %}Register Account{% endblock %}
+
+{% block content %}
+    <h2>Register</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="generic-button" type="submit">Register</button>
+    </form><p>
+
+    <h1>
+        ERROR:
+        {{ form.errors }}
+    </h1>
+{% endblock %}
