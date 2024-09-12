@@ -1,19 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% comment %} {% block css_link %}
+{% block css_link %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-{% endblock %} {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/authentication.css' %}">
+{% endblock %}
 
 {% block title %}Register Account{% endblock %}
 
 {% block content %}
     <h2>Register</h2>
-    <form method="post">
+    Start your journey towards smart investments today.
+    <div class="auth-form">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="generic-button" type="submit">Register</button>
+        </form>
+    </div>
+
+    Already have account? Login here.
+    <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button class="generic-button" type="submit">Register</button>
-    </form><p>
+        <button class="generic-button" type="submit">Login</button>
+    </form>
 
     <h1>
         ERROR:
