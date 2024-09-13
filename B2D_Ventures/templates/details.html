@@ -72,12 +72,19 @@
         <button class="generic-button">Start Investment</button>
     </div>
     <hr>
-    #TODO wil be changed to navbar<br>
     {% comment %}
     #TODO make sticky
     {% endcomment %}
-    <button class="generic-button" onclick="toggleDetails()" style="margin-right: 5px;">See Details</button>
-    <button class="generic-button" onclick="toggleDiscussion()">See Discussion</button>
+    <ul class="navbar">
+        <li class="navbar-item-left">
+            <a class="navbar-link" onclick="toggleDetails()" 
+            data-section="details-navbar" style="margin-right: 5px;">See Details</a>
+        </li>
+        <li class="navbar-item-left">
+            <a class="navbar-link" onclick="toggleDiscussion()"
+            data-section="details-navbar">See Disscussion</a>
+        <li>
+    </ul>
     <hr>
 
     {% comment %} #TODO Refactor to atomic details {% endcomment %}
