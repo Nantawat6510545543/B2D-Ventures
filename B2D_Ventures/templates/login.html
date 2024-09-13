@@ -10,36 +10,37 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-    <h2>Login</h2>
-    <form method="post">
-        {% csrf_token %}
-        <div class="auth-form">
-            Username<br>
-            {{ form.username }}
-            <br><br>
-            Password<br>
-            {{ form.password }}
+    <img class="auth-picture" src="https://images.tokopedia.net/blog-tokopedia-com/uploads/2019/09/investasi-aman.jpg"></img>
+    <div class="auth-div">
+        <p class="heading-font">Login</p>
+        <form method="post">
+            {% csrf_token %}
+            <div class="auth-form">
+                <p class="topic-font">Username</p>
+                {{ form.username }}
+                <br><br>
+                <p class="topic-font">Password</p>
+                {{ form.password }}
+            </div>
+            <br>
+            <button class="generic-button" type="submit">Login</button>
+        </form>
+
+        Doesn't have account? Register here.
+        <br><br>
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <button class="generic-button" type="submit">Register</button>
+        </form>
+
+        <form action="{% provider_login_url 'google' %}">
+            <button id="login-with-google-btn" type="submit">Sign in with Google</button>
+        </form>
+
+    {% if form.non_field_errors %}
+        <div class="error">
+            {{ form.non_field_errors }}
         </div>
-        <br>
-        <button class="generic-button" type="submit">Login</button>
-    </form>
-
-    Doesn't have account? Register here.
-    <form action="{% url 'register' %}" method="post">
-        {% csrf_token %}
-        <button class="generic-button" type="submit">Register</button>
-    </form>
-
-    <form action="{% provider_login_url 'google' %}">
-        <button id="login-with-google-btn" type="submit">Sign in with Google</button>
-    </form>
-
-    {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
     {% endif %}
+    </div>
 {% endblock %}
-
