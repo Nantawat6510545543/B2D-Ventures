@@ -28,6 +28,7 @@
     font-family: 'Urbanist', sans-serif;
     font-size: 20px;
     color: white;
+    width: 100%;
 }
 
 /* Fix autofill color */
@@ -45,8 +46,7 @@
     position: absolute;
     top: 50%;
     left: 75%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    transform: translate(-50%, -47.5%) scale(0.67);
 }
 
 .error {

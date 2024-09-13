@@ -7,13 +7,10 @@
 {% endblock %}
 
 {% block content %}
-    {% if messages %}
-        {{ messages }}
-        <ul class="messages">
-            {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
+    {% if form.non_field_errors %}
+    <div class="error">
+        {{ form.non_field_errors }}
+    </div>
     {% endif %}
 
     <a href={% url 'details' %}>Example Detail Page</a>

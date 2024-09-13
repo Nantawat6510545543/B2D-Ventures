@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load socialaccount %}
 {% load static %}
 
 {% block css_link %}
@@ -9,24 +10,41 @@
 {% block title %}Register Account{% endblock %}
 
 {% block content %}
-    <h2>Register</h2>
-    Start your journey towards smart investments today.
-    <div class="auth-form">
-        <form method="post">
+    <img class="auth-picture" src="https://images.tokopedia.net/blog-tokopedia-com/uploads/2019/09/investasi-aman.jpg"></img>
+    <div class="auth-div">
+        <p class="heading-font" style="text-align: center;">B2D Ventures</p>
+        Start your journey towards smart investments today.
+        <p class="heading-font">Register</p>
+        <div class="auth-form">
+            <form method="post" style="text-align: center;">
+                {% csrf_token %}
+                <p class="topic-font" style="text-align: left;">Username</p>
+                {{ form.username }}
+                <p class="topic-font" style="text-align: left;">Password</p>
+                {{ form.password1 }}
+                <p class="topic-font" style="text-align: left;">Confirm Password</p>
+                {{ form.password2 }}
+                <p class="topic-font" style="text-align: left;">Email</p>
+                {{ form.email }}
+                <br><br>
+                <button class="generic-button" type="submit" style="width: 50%;">Register</button>
+            </form>
+        </div>
+
+
+        <p>Already have account? Login here.</p>
+        <form action="{% url 'login' %}" method="post" style="text-align: center;">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button class="generic-button" type="submit">Register</button>
+            <button class="generic-button" type="submit" style="width: 50%;">Login</button>
         </form>
-    </div>
 
-    Already have account? Login here.
-    <form action="{% url 'login' %}" method="post">
-        {% csrf_token %}
-        <button class="generic-button" type="submit">Login</button>
-    </form>
+        <form action="{% provider_login_url 'google' %}" style="text-align: center;">
+            <button id="login-with-google-btn" type="submit">Sign in with Google</button>
+        </form>
 
-    <h1>
-        ERROR:
-        {{ form.errors }}
-    </h1>
+    {% if form.non_field_errors %}
+        <div class="error">
+            {{ form.non_field_errors }}
+        </div>
+    {% endif %}
 {% endblock %}
