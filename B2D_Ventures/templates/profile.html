@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% comment %} 
+{% block css_link %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %} {% endcomment %}
+
+
+{% block content %}
+    <img src="https://64.media.tumblr.com/cff5524eaed3a69e6187d4a8a7bd8417/3eea390ca2b57633-e8/s640x960/e597246a66f8169f886d2807c9d30eac3af2814c.jpg">
+    <p class="heading-font">{{ user.username }}</p>
+    <p class="content-font">{{ user.email }}</p>
+    <p class="content-font">{{ user.bio }}</p>
+{% endblock %}

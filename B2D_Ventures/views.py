@@ -18,6 +18,9 @@ def details(request):
     return render(request, 'details.html')
 
 
+def profile(request):
+    return render(request, "profile.html")
+
 class RegisterView(CreateView):
     form_class = CustomUserCreationForm
     template_name = 'register.html'
