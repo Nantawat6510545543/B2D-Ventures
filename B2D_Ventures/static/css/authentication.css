@@ -17,6 +17,43 @@
     text-decoration: none;
 }
 
+.auth-picture {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center;     /* Centers the image vertically (if needed) */
+}
+
+.auth-picture img {
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    padding-left: 20%;
+}
+
+.auth-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: 100vh; /* Full viewport height */
+}
+
+.auth-div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-form button {
+    width: 50%; /* Optional: Adjust width if needed */
+    margin: 0 auto; /* This centers the button horizontally */
+    display: block; /* Forces the button to take up the full width of its container */
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 300px; /* Optional, to limit the form width */
+}
 
 .auth-form input,
 .auth-form textarea {
@@ -42,26 +79,8 @@
     box-shadow: inset 0 0 20px 20px #23232329;
 }
 
-.auth-div {
-    position: absolute;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -47.5%) scale(0.67);
-}
-
 .error {
     color: red;
     font-size: 16px;
     margin-top: 5px;
-}
-
-.auth-picture {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 70%;
-    margin-left: 80px;
-    border-radius: 12px;
 }

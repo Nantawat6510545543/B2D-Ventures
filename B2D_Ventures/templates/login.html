@@ -10,37 +10,41 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-    <img class="auth-picture" src="https://images.tokopedia.net/blog-tokopedia-com/uploads/2019/09/investasi-aman.jpg"></img>
+<div class="auth-container">
+    <div class="auth-picture">
+        <img src="https://images.tokopedia.net/blog-tokopedia-com/uploads/2019/09/investasi-aman.jpg" alt="Investment Image">
+    </div>
     <div class="auth-div">
-        <p class="heading-font" style="text-align: center;">B2D Ventures</p>
+        <p class="heading-font">B2D Ventures</p>
         Start your journey towards smart investments today.
         <p class="heading-font">Login</p>
         <div class="auth-form">
-            <form method="post" style="text-align: center;">
+            <form method="post">
                 {% csrf_token %}
-                <p class="topic-font" style="text-align: left;">Username</p>
+                <p class="topic-font">Username</p>
                 {{ form.username }}
-                <p class="topic-font" style="text-align: left;">Password</p>
+                <p class="topic-font">Password</p>
                 {{ form.password }}
                 <br><br>
-                <button class="generic-button" type="submit" style="width: 50%;">Login</button>
+                <button class="generic-button" type="submit">Login</button>
             </form>
         </div>
 
         <p>Doesn't have account? Register here.</p>
-        <form action="{% url 'register' %}" method="post" style="text-align: center;">
+        <form action="{% url 'register' %}" method="post">
             {% csrf_token %}
-            <button class="generic-button" type="submit" style="width: 50%;">Register</button>
+            <button class="generic-button" type="submit">Register</button>
         </form>
 
-        <form action="{% provider_login_url 'google' %}" style="text-align: center;">
+        <form action="{% provider_login_url 'google' %}">
             <button id="login-with-google-btn" type="submit">Sign in with Google</button>
         </form>
 
-    {% if form.non_field_errors %}
+        {% if form.non_field_errors %}
         <div class="error">
             {{ form.non_field_errors }}
         </div>
     {% endif %}
     </div>
+</div>
 {% endblock %}
