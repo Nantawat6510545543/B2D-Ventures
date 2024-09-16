@@ -1,0 +1,30 @@
+/* .profile-img {
+
+} */
+
+.profile-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: 100vh; /* Full viewport height */
+}
+
+.profile-div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-div-center {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 500px;
+    height: 500px;
+    border: none;
+    border-radius: 50%;
+}

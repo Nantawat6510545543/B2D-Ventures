@@ -1,15 +1,32 @@
 {% extends "base.html" %}
 {% load static %}
-{% comment %} 
+
 {% block css_link %}
     {{ block.super }}
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-{% endblock %} {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
 
 
 {% block content %}
-    <img src="https://64.media.tumblr.com/cff5524eaed3a69e6187d4a8a7bd8417/3eea390ca2b57633-e8/s640x960/e597246a66f8169f886d2807c9d30eac3af2814c.jpg">
-    <p class="heading-font">{{ user.username }}</p>
-    <p class="content-font">{{ user.email }}</p>
-    <p class="content-font">{{ user.bio }}</p>
+<div class="profile-container">
+    <div class="profile-div-center">
+        <img class="profile-image" src="https://64.media.tumblr.com/cff5524eaed3a69e6187d4a8a7bd8417/3eea390ca2b57633-e8/s640x960/e597246a66f8169f886d2807c9d30eac3af2814c.jpg">
+        <p class="heading-font">{{ user.username }}</p>
+        <p class="content-font">Email: {{ user.email }}</p>
+        <p class="content-font">Bio: {{ user.bio }}</p>
+        <p class="content-font">Balance: 5000$</p>
+    </div>
+    <div class="profile-div">
+        <button class="generic-button">Your Start-up</button><br>
+        <div class="container">
+            <p class="topic-font">MountainSaver</p>
+            <p class="content-font">Total Investment: 120,000$</p>
+        </div><br>
+        <button class="generic-button">Invested Start-up</button><br>
+        <div class="container">
+            <p class="topic-font">Forest Friend</p>
+            <p class="content-font">Invested Amount: 4000$</p>
+        </div><br>
+    </div>
+</div>
 {% endblock %}
