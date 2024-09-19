@@ -1,4 +1,3 @@
-
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -12,6 +11,5 @@ def details(request):
     return render(request, 'details.html')
 
 
-
-
-
+def profile(request):
+    return render(request, "profile.html")
