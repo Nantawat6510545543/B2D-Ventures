@@ -1,22 +1,54 @@
 {% extends "base.html" %}
+{% load socialaccount %}
 {% load static %}
 
-{% comment %} {% block css_link %}
+{% block css_link %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-{% endblock %} {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/authentication.css' %}">
+{% endblock %}
 
 {% block title %}Register Account{% endblock %}
 
 {% block content %}
-    <h2>Register</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="generic-button" type="submit">Register</button>
-    </form><p>
+<div class="auth-container">
+    <div class="auth-picture">
+        <img src="https://images.tokopedia.net/blog-tokopedia-com/uploads/2019/09/investasi-aman.jpg"></img>
+    </div>
+    <div class="auth-div">
+        <p class="heading-font">B2D Ventures</p>
+        Start your journey towards smart investments today.
+        <p class="heading-font">Register</p>
+        <div class="auth-form">
+            <form method="post">
+                {% csrf_token %}
+                <p class="topic-font">Username</p>
+                {{ form.username }}
+                <p class="topic-font">Password</p>
+                {{ form.password1 }}
+                <p class="topic-font">Confirm Password</p>
+                {{ form.password2 }}
+                <p class="topic-font">Email</p>
+                {{ form.email }}
+                <br><br>
+                <button class="generic-button" type="submit">Register</button>
+            </form>
+        </div>
 
-    <h1>
-        ERROR:
-        {{ form.errors }}
-    </h1>
+        <p>Already have account? Login here.</p>
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <button class="generic-button" type="submit">Login</button>
+        </form>
+
+        <form action="{% provider_login_url 'google' %}">
+            <button id="login-with-google-btn" type="submit">Sign in with Google</button>
+        </form>
+
+    {% if form.non_field_errors %}
+        <div class="error">
+            {{ form.non_field_errors }}
+        </div>
+    {% endif %}
+    </div>
+</div>
 {% endblock %}

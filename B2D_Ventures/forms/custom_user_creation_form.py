@@ -15,6 +15,7 @@ def changed_username_is_not_unique(cleaned_data, user_id) -> bool:
 
 
 class CustomUserCreationForm(UserCreationForm):
+    usable_password = None  # remove other backends authentication
     profile_picture = background_picture = forms.ImageField(required=False)
 
     class Meta:

@@ -2,36 +2,50 @@
 {% load socialaccount %}
 {% load static %}
 
-{% comment %} {% block css_link %}
+{% block css_link %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-{% endblock %} {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/authentication.css' %}">
+{% endblock %}
 
 {% block title %}Login{% endblock %}
 
+#TODO add border round to img
 {% block content %}
-    <h2>Login</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="generic-button" type="submit">Login</button>
-    </form>
-
-    Doesn't have account? Register here.
-    <form action="{% url 'register' %}" method="post">
-        {% csrf_token %}
-        <button class="generic-button" type="submit">Register</button>
-    </form>
-
-    <div>
-        <a href="{% provider_login_url 'google' %}" class="login-with-google-btn">Sign in with Google</a>
+<div class="auth-container">
+    <div class="auth-picture">
+        <img src="https://images.tokopedia.net/blog-tokopedia-com/uploads/2019/09/investasi-aman.jpg" alt="Investment Image">
     </div>
+    <div class="auth-div">
+        <p class="heading-font">B2D Ventures</p>
+        Start your journey towards smart investments today.
+        <p class="heading-font">Login</p>
+        <div class="auth-form">
+            <form method="post">
+                {% csrf_token %}
+                <p class="topic-font">Username</p>
+                {{ form.username }}
+                <p class="topic-font">Password</p>
+                {{ form.password }}
+                <br><br>
+                <button class="generic-button" type="submit">Login</button>
+            </form>
+        </div>
 
-    {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
+        <p>Doesn't have account? Register here.</p>
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <button class="generic-button" type="submit">Register</button>
+        </form>
+
+        <form action="{% provider_login_url 'google' %}">
+            <button id="login-with-google-btn" type="submit">Sign in with Google</button>
+        </form>
+
+        {% if form.non_field_errors %}
+        <div class="error">
+            {{ form.non_field_errors }}
+        </div>
     {% endif %}
+    </div>
+</div>
 {% endblock %}
-
